@@ -20,7 +20,7 @@ module TokBoxer
           <param name="movie" value="#{@api.api_server_url}#{API_SERVER_CALL_WIDGET}#{id}" />
           <param name="allowFullScreen" value="true" />
           <param name="allowScriptAccess" value="true" />
-          <param name="flashVars" value="textChat=true&guestList=false&inviteButton=false" />
+          <param name="flashVars" value="textChat=true&guestList=false&inviteButton=false&showSocialInvite=false&addVideoButton=false" />
           <embed src="#{@api.api_server_url}#{API_SERVER_CALL_WIDGET}#{id}"
                  type="application/x-shockwave-flash"
                  allowfullscreen="true"
