@@ -14,20 +14,20 @@ module TokBoxer
       @api            = api
     end
     
-    def embed_code(width="322", height="321")
+    def embed_code(width="322", height="321", options="textChat=true&guestList=false&inviteButton=false")
       <<-END
       <object width="#{width}" height="#{height}">
           <param name="movie" value="#{@api.api_server_url}#{API_SERVER_CALL_WIDGET}#{id}" />
           <param name="allowFullScreen" value="true" />
           <param name="allowScriptAccess" value="true" />
-          <param name="flashVars" value="textChat=true&guestList=false&inviteButton=false&showSocialInvite=false&addVideoButton=false" />
+          <param name="flashVars" value="#{options}" />
           <embed src="#{@api.api_server_url}#{API_SERVER_CALL_WIDGET}#{id}"
                  type="application/x-shockwave-flash"
                  allowfullscreen="true"
                  allowScriptAccess="always"
                  width="#{width}"
                  height="#{height}"
-                 flashvars="textChat=true&guestList=false&inviteButton=false" >
+                 flashvars="#{options}" >
           </embed>
       </object>
       END
