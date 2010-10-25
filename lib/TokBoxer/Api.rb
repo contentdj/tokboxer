@@ -13,10 +13,10 @@ module TokBoxer
       result = request(method, call, params)
     end
 
-    def create_invite(callerJabberId, calleeJabberId, call_id)
+    def create_invite(callerJabberId, calleeJabberId, callId)
       method = "POST"
       call = "/calls/invite"
-      params = { :callerJabberId => callerJabberId, :calleeJabberId => calleeJabberId, :callId => call_id }
+      params = { :callerJabberId => callerJabberId, :calleeJabberId => calleeJabberId, :callId => callId }
       result = request(method, call, params)
     end
 
